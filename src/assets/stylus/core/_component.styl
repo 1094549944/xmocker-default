@@ -1,0 +1,94 @@
+.filter-input {
+  width 300px
+  overflow hidden
+  border-bottom 1px solid $border-color-base
+
+  .ivu-input-group-prepend {
+    background-color transparent
+    border none
+    color $primary-color
+    font-size 18px
+  }
+  
+  input {
+    border none
+
+    &:focus {
+      box-shadow none
+    }
+  }
+}
+
+.filter-field {
+  margin-bottom 16px
+}
+
+.table-field {
+  margin-bottom 16px
+}
+.pagination-field {
+  flexLayout()
+}
+
+.report {
+  .report-item {
+    display inline-block
+    position relative
+    width 100px
+    height @width
+    line-height @height
+    margin-right 4px
+    text-align center
+    overflow hidden
+
+    img {
+      width 100%
+      height 100%
+      border-radius 4px
+      object-fit cover
+    }
+
+    .cover {
+      display none
+      position absolute
+      top 0
+      right 0
+      bottom 0
+      left 0
+      background alpha($black, .6)
+      border-radius 4px
+
+      .tool {
+        color $white
+        margin 0 2px
+        cursor pointer
+        opacity .8
+
+        &:hover {
+          opacity 1
+        }
+      }
+    }
+
+    &:hover {
+      .cover {
+        display block
+      }
+    }
+  }
+  .upload {
+    display inline-block
+    width 100px
+    height 100px
+
+    &-cover {
+      flexLayout()
+      width 100px
+      height @width
+      background $grey-4
+      color $grey-6
+      border-radius 4px
+    }
+  }
+}
+
